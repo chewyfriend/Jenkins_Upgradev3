@@ -8,7 +8,7 @@ freeStyleJob("First-Job-via-dsl")
         scm('* * * * *')
     }
     steps{
-        maven('clean package','java-tomcat-sample/pom.xml')
+        maven('clean package','maven-samples/single-module/pom.xml')
     }
     publishers{
         archiveArtifacts('**/*.jar')

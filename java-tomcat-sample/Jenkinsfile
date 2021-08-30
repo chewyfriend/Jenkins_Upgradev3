@@ -19,7 +19,7 @@ pipeline
         stage('Deploy to Staging')
         {
             steps{
-                build job:'package_deploy_stage'
+                build job:'Package_deploy_stage'
             }
         }
         stage("Deploy to production")
@@ -29,7 +29,7 @@ pipeline
             {
                 input message:"Approve production request ?"
             }
-            build job:'package_deploy_prod'
+            build job:'Package_deploy_prod'
             }
         }    
     }
